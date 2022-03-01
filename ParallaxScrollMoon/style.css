@@ -1,0 +1,103 @@
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    /*instead of unset, inherit... continue à descendre ou monter de façon plus "smooth" plutot que stop abrupt*/
+    scroll-behavior:smooth;
+}
+
+body {
+    background: linear-gradient(#c0e9fa,#04003a);
+    min-height: 100vh;
+
+    /* je vais déplacer des trucs horizontalement sans que le user ne puisse les "suivre"*/
+    overflow-x: hidden;
+}
+
+header{
+    /* fait un ToUpper à tous les txts du header!!*/
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style:none;
+    margin-left: 20px;
+}
+
+header ul li a 
+{
+    padding: 6px 15px;
+    color: rgb(3, 2, 12);
+    border-radius: 20px;
+}
+
+/* you can define interactions like that using pure CSS!*/
+header ul li a:hover
+{
+    padding: 6px 15px;
+    color: #c0e9fa;
+    background: #04003a;
+}
+
+section{
+
+    /* Idk if mixing % vh and px is ok.. */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section img#catsmile
+{
+    opacity: 70%;
+    height: 20vh;
+    width: 20%;
+    mix-blend-mode:screen;
+    margin-left: 60vh;
+}
+
+#cards_background{
+    z-index: 1;
+}
+#cards_front{
+    z-index: 100;
+}
+
+#text{
+    z-index: 10;
+   /* right: -200px;*/
+    position: absolute;
+    color: rgb(19, 19, 1);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4.5vw;
+}
+
+section img{
+    position: absolute;
+    top:80px;
+    left:0;
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+
