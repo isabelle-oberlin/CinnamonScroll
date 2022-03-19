@@ -16,48 +16,94 @@ body {
     overflow-x: hidden;
 }
 
-header{
+footer{
     /* fait un ToUpper à tous les txts du header!!*/
     text-transform: uppercase;
-    position: absolute;
-    top: 0;
+    position:relative;
+    bottom : 0;
+    margin-bottom: 0%;
     left: 0;
     width: 100%;
     padding: 30px 100px;
     display: flex;
-    justify-content:space-between;
+    justify-content:center;
     align-items: center;
 }
-
-header ul {
+/*
+footer ul {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-header ul li{
-    list-style:none;
-    margin-left: 20px;
+*/
+#neon-btn {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    /*background: #031628; */
+}
+  
+.btn {
+    border: 1px solid;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 10px 20px;
+    font-weight: 300;
+}
+.Home{
+    color: rgba(253, 34, 34, 0.966);
+}
+  
+.About {
+    color: #b9e769;
+  }
+  
+.CV {
+    color:  #4cc9f0;
 }
 
-header ul li a 
-{
-    padding: 6px 15px;
-    color: rgb(3, 2, 12);
-    border-radius: 20px;
+.Contact {
+    color: rgb(189, 13, 189);
+}
+  
+.btn:hover {
+    color: white;
+    border: 0;
+}
+  
+.Home:hover {
+    background-color: red;
+    -webkit-box-shadow: 10px 10px 99px 6px red;
+    -moz-box-shadow: 10px 10px 99px 6px red;
+    box-shadow: 10px 10px 99px 6px red;
+}
+  
+.About:hover {
+    background-color: #08df37;
+    -webkit-box-shadow: 10px 10px 99px 6px #38ff63;
+    -moz-box-shadow: 10px 10px 99px 6px #38ff63;
+    box-shadow: 10px 10px 99px 6px #38ff63;
+}
+  
+.CV:hover {
+    background-color: #0de3eb;
+    -webkit-box-shadow: 10px 10px 99px 6px #0ef7ff;
+    -moz-box-shadow: 10px 10px 99px 6px #0ef7ff;
+    box-shadow: 10px 10px 99px 6px #0ef7ff;
 }
 
-/* you can define interactions like that using pure CSS!*/
-header ul li a:hover
-{
-    padding: 6px 15px;
-    color: #c0e9fa;
-    background: #04003a;
+.Contact:hover{
+    background-color: #db0f9e;
+    -webkit-box-shadow: 10px 10px 99px 6px #db0f9e;
+    -moz-box-shadow: 10px 10px 99px 6px #db0f9e;
+    box-shadow: 10px 10px 99px 6px #db0f9e;
 }
+  
 
 section{
 
-    /* Idk if mixing % vh and px is ok.. */
+    /* Idk if mixing % vh and px is ok, but that's where I m heading for the whole project */
     position: relative;
     width: 100%;
     height: 100vh;
@@ -67,6 +113,14 @@ section{
     justify-content: center;
 }
 
+.textbox {
+    font-size: 32px;
+    color: rgb(19, 19, 1);
+}
+
+.appearing{
+    opacity: 0.3;
+}
 section img#catsmile
 {
     opacity: 70%;
@@ -83,13 +137,14 @@ section img#catsmile
     z-index: 100;
 }
 
-#text{
+#text, #madtext, #finaltext{
     z-index: 10;
    /* right: -200px;*/
     position: absolute;
     color: rgb(19, 19, 1);
     font-family: 'Times New Roman', Times, serif;
     font-size: 4.5vw;
+    overflow: hidden;
 }
 
 section img{

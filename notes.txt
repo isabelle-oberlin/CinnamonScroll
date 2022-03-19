@@ -1,3 +1,32 @@
 
 Pb d'interposition: z-index
 https://developer.mozilla.org/fr/docs/Web/CSS/z-index
+
+
+ajouter des msgs marrants avec le on hover (d'habitude on a une vraie description qui nous montre la balise title, mais
+la on peut mettre des fausses indications ou moqueuses lewis caroll style)
+https://sebhastian.com/html-hover-text/
+
+
+
+Encore inspirations:
+
+https://beautifulbooks.info/2019/12/minalima-alice/
+
+
+Texte qui "explose" par lettres quand on passe la souris par dessus =>pour la noyade d'ALice?
+
+otes / Tips
+You can change the default ease via gsap.defaults({ease: ...});. The default is "power1.out".
+
+Kill all tweens of a particular object anytime with gsap.killTweensOf(yourObject); You can also use selector text like gsap.killTweensOf("#someID");
+
+You can kill all delayedCalls to a particular function with gsap.killTweensOf(myFunction);
+
+
+http://302chanwoo.com/
+
+
+Text qui est révélé par une ligne mouvante, un peu comme un rideau, la version SVG est plus stylé mais devrait me demander de comprendre le SVG rip:
+https://codepen.io/PointC/pen/zEgvge
+https://codepen.io/Sahil89/pen/rGXxLR
