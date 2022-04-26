@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where the reader discovers a parallax landscape</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CustomEase.min.js"></script>
+
+    <script src="view.js" defer></script>
+
+    <link rel="stylesheet" type="text/css" href="view.css">
+</head>
+
+<body>
+    <!-- parallax scrolling. The several layers of the landscape move at different paces which creates
+    an illusion of depth-->
+    <div class="container">
+        <div class="container_img">
+            <div class=parallax_img>
+                <!-- this part is covered by the landscape layers unless you scroll enough, 
+                which deepens the 3D illusion thanks to interposition tricks-->
+                <img src="img/cheshire.png" id ="cat" alt="not the sun but the cat again!">
+                <a href="./clickme.html#anchor" id="link"><h2 id="goBack">Go back</h2></a>
+                
+                <!--layers of landscape-->
+                <img src="img/p1.png" id ="p1" alt="mountains at the horizon">
+                <img src="img/p2.png" id="p2" alt="mountains at the horizon">
+                <img src="img/p3.png" id="p3" alt="mountains at the horizon">
+                <img src="img/p4.png" id="p4" alt="mountains with trees">
+                <img src="img/p5.png" id="p5"  alt="mountains with trees">
+                <img src="img/p6.png" id="p6" alt="mountains with trees">
+                <img src="img/p7.png" id="p7" alt="mountains with trees">
+                <img src="img/p8.png" id="p8" alt="mountains with trees">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

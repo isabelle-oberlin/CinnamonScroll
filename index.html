@@ -1,67 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title> Beginning </title>
+    <title>Where the reader discovers CinnamonScroll</title>
 
-  <!--Packages gsap-->
-  <script
-  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"
-  defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Flip.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Draggable.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EaselPlugin.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CustomEase.min.js"></script>
+    <!--GSAP packages-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EaselPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/CustomEase.min.js"></script>
 
-<!--le lien vers les js-->
-<script src="script.js" defer></script>
+    <!--js link-->
+    <script src="script.js" defer></script>
 
-
+    <!--CSS link -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="flex-container">
-    <div class = "paragraph">
-        <div class="innerparagraph">
-            <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it.</p>
-       
-        <div class="AliceThoughts">
-            <p>"and what is the use of a book, without pictures or conversation?"</p>
+
+    <section>
+        <img src="img/cheshire smile.png" id="catsmile" alt="Cheshire smile">
+        <img src="img/cheshire eyes.png" id="eyes" alt="Cheshire eyes that disappear">
+        <br>
+        <img src="img/logo800_160.png" id="logo" alt="cute logo">
+    </section>
+
+
+    <section>
+
+        <div class="textbox">Alice was beginning to get very tired of sitting by her sister on the bank, and of having
+            nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or
+            conversations in it. <br><span id="appearing">And what is the use of a book without pictures or
+                conversations?</span><br>
+            She was considering whether the pleasure of making a daisy-chain would be worth the trouble of getting up
+            and picking the daisies, when <span class="shockSize">suddenly</span>
+            <br>
+            <span id="runningRabbit">a White Rabbit with pink eyes ran close by her!</span>
+            <br>
+            She ran across the field after it, and fortunately was just in time to see it pop down a large rabbit-hole
+            under the hedge.
+
+            In another moment down went Alice after it, never once considering how in the world she was to get out
+            again.
+
+            The rabbit-hole went straight on like a tunnel for some way, and then <br>
+            <span id="dipping">dipped <br>suddenly<br><br>down,</span> <br>
+            <br><br>
+            so suddenly that Alice had not a moment to think about stopping herself
+
+            <div class="lineEffect">
+                <br><br><br>
+                <span class=falling id="falling">before she found herself falling</span>
+                <div class="line"></div>
+            </div>
         </div>
+
+    </section>
+
+
+    <section>
+        <h2 id="text">Follow the white rabbit</h2>
+        <img src="img/cards_front.png" id="cards_front" alt="playing cards">
+        <img src="img/cards_background.png" id="cards_back" alt="playing cards">
+    </section>
+
+    <section>
+        <img src="img/cards2.png" id="cards2" alt="playing cards">
+        <h2 id="madtext">We're all mad here</h2>
+        <img src="img/cards4.png" id="cards4" alt="playing cards">
+        <img src="img/2-removebg-preview.png" id="picturerabbit" alt="White rabbit with an old watch and a jacket">
+    </section>
+
+    <section>
+        <img src="img/cards3.png" id="cards3" alt="playing cards">
+        <img src="img/cards2.png" id="cards22" alt="playing cards">
+    </section>>
+
+    <section>
+        <h1><span>I</span>F YOU DON'T <span>KNOW </span><br>WHERE <span>YOU ARE</span> GOING, <br><span>A</span>NY 
+            ROAD <span>CA</span><span id="N">N </span><span>T</span>AKE YOU THERE</h1>
+
+       <!--    Another version: "you know a road". Blackout poetry at its finest
+           <h1>IF <span>YOU </span>DON'T <span>KNOW </span><br>WHERE YOU ARE GOING, <br><span>A</span>NY 
+            <span>ROAD </span>CAN TAKE YOU THERE</h1>-->
+        <br><br>
+    </section>
+    <div id ="sentence">
+        <br><br>
+        Looks like you should read my CV :)
+        <img src="img/cheshire eyes.png" id="eyes2" alt="Cheshire eyes that appear and glow">
     </div>
 
- 
-    <div class="rabbit"><img src= "img/coloredRabbit.jpg"></div>
-    <div class="RabbitParagraph">   
-        <p>So she was considering in her own mind (as well as she could, 
-        for the hot day made her feel very sleepy and stupid), whether 
-        the pleasure of making a daisy-chain would be worth the 
-        trouble of getting up and picking the daisies, when suddenly a 
-        White Rabbit with pink eyes ran close by her. 
-        There was nothing so VERY remarkable in that; nor did Alice 
-        think it so VERY much out of the way to hear the Rabbit say 
-        to itself, `Oh dear! Oh dear! I shall be late!' (when she thought 
-        it over afterwards, it occurred to her that she ought to have 
-        wondered at this, but at the time it all seemed quite natural); 
-        but when the Rabbit actually TOOK A WATCH OUT OF ITS 
-        WAISTCOAT- POCKET, and looked at it, and then hurried 
-        on, Alice started to her feet, for it flashed across her mind that 
-        she had never before seen a rabbit with either a waistcoat-pocket, or a watch to take out of it, and 
-        burning with curiosity, she ran across the field after it, and fortunately was just in time to see it pop 
-        down a large rabbit-hole under the hedge.</p>
-    </div>
-</div>
-    
-<!--animation du texte qui disparait quand alice saute dans le trou, 
-fondu au noir, scroll parallax avec le titre et d'autres phrases/persos qui passent
-à la moonscroll. Sur les bords, la forêt? Une "montagne" de cartes ou de rosiers ?
+    <footer>
+        <div id="neon-btn">
+            <a href="./clickme.html"><button class="btn Home">Begin reading</button></a>
+            <button onclick="window.location.href='./about.html'" class="btn About">About</button>
+            <button
+                onclick="window.location.href='https://drive.google.com/file/d/1hYxumnAoB5lbrHFQ2ksd6RdQERRkABZn/view';"
+                class="btn CV">CV</button>
+            <button class="btn Contact" onclick="contact()">Contact</button>
+        </div>
+    </footer>
 
-+ faire le chat et son sourire qui disparaissent réapparaissent au scroll
-
-+la scène de noyade: mots mouillés, gouttes de pluie...-->
 </body>
+
 </html>

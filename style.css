@@ -1,37 +1,622 @@
-.paragraph {
-    font: Times;
-    font-size: 120%;
-    margin: 15%;
-    height: 100vh;
-    color: black;
-    position: absolute;
-    z-index: 12;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Times New Roman', Times, serif;
+   /*instead of unset, inherit... goes on a bit so it does not stagger*/
+   scroll-behavior: smooth;
 }
 
-.AliceThoughts {
-    color: aqua;
+body {
+   background: linear-gradient(#c0e9fa, #04003a);
+   min-height: 100vh;
+   overflow-x: hidden;
 }
 
-.flex-container{
-    display: flex;
-    flex-direction: column;
+footer {
+   /* does a ToUpper to each text!!*/
+   text-transform: uppercase;
+   position: relative;
+   bottom: 0;
+   margin-bottom: 0%;
+   left: 0;
+   width: 100%;
+   padding: 30px 100px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-img {
-    height: 20;
-    width:  20%;
-    object-fit: contain;
-    position: absolute;
-    /*-index: 1;
-    opacity: 0*/
-    
-}
-   
-.rabbit{
-    height: 20%;
-    width: auto;
-    }
 
-.RabbitParagraph{
-    position: absolute;
+#logo {
+   height: 15vh;
+   width: 50%;
+   margin-top: 35vh;
+   margin-left: 40vh;
+}
+
+#neon-btn {
+   display: flex;
+   align-items: center;
+   height: 100vh;
+   /*background: #031628; */
+}
+
+.btn {
+   border: 1px solid;
+   background-color: transparent;
+   text-transform: uppercase;
+   font-size: 14px;
+   padding: 10px 20px;
+   font-weight: 300;
+   z-index: 1;
+}
+
+.Home {
+   color: rgba(253, 34, 34, 0.966);
+}
+
+.About {
+   color: #b9e769;
+}
+
+.CV {
+   color: #4cc9f0;
+}
+
+.Contact {
+   color: rgb(189, 13, 189);
+}
+
+.btn:hover {
+   color: white;
+   border: 0;
+}
+
+/* halo neon signs thanks to :hover */
+.Home:hover {
+   background-color: red;
+   -webkit-box-shadow: 10px 10px 99px 6px red;
+   -moz-box-shadow: 10px 10px 99px 6px red;
+   box-shadow: 10px 10px 99px 6px red;
+}
+
+.About:hover {
+   background-color: #08df37;
+   -webkit-box-shadow: 10px 10px 99px 6px #38ff63;
+   -moz-box-shadow: 10px 10px 99px 6px #38ff63;
+   box-shadow: 10px 10px 99px 6px #38ff63;
+}
+
+.CV:hover {
+   background-color: #0de3eb;
+   -webkit-box-shadow: 10px 10px 99px 6px #0ef7ff;
+   -moz-box-shadow: 10px 10px 99px 6px #0ef7ff;
+   box-shadow: 10px 10px 99px 6px #0ef7ff;
+}
+
+.Contact:hover {
+   background-color: #db0f9e;
+   -webkit-box-shadow: 10px 10px 99px 6px #db0f9e;
+   -moz-box-shadow: 10px 10px 99px 6px #db0f9e;
+   box-shadow: 10px 10px 99px 6px #db0f9e;
+}
+
+
+section {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   padding: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+section #turned {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+
+/*in a textbox, animated text can get stuck on the side or disappear, it's more interesting*/
+.textbox {
+   font-size: 24px;
+   color: rgb(19, 19, 1);
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding: 0;
+}
+
+
+
+/*if you use p however, you have margins to be sure that the text is fully visible*/
+p {
+   margin: 40px;
+}
+
+.shockSize:hover {
+   font-size: 100px;
+}
+
+.textEffect {
+   width: 500px;
+   height: 100px;
+   position: relative;
+}
+
+.vertical {
+   writing-mode: vertical-lr;
+   text-orientation: upright;
+}
+
+#falling {
+   font-size: 32px;
+   line-height: 100px;
+   width: 600px;
+   height: 100px;
+   position: absolute;
+   bottom: 0;
+   overflow: hidden;
+}
+
+.line {
+   position: absolute;
+   margin-left: 0px;
+   bottom: 0;
+   width: 410px;
+   height: 2px;
+   background-color: black;
+   display: flex;
+   align-items: center;
+}
+
+.lineEffect {
+   display: flex;
+   align-items: center;
+}
+
+section img#catsmile {
+   opacity: 70%;
+   height: 20vh;
+   width: 20%;
+   mix-blend-mode: screen;
+   margin-left: 70vh;
+}
+
+#sentence {
+   opacity: 0;
+   color: whitesmoke;
+}
+
+#eyes {
+   height: 20vh;
+   width: 20%;
+   margin-left: 70vh;
+   mix-blend-mode: screen;
+}
+
+#cards_background {
+   z-index: 1;
+}
+
+#cards_front {
+   z-index: 100;
+}
+
+#picturerabbit {
+   height: 25vh;
+   width: 10%;
+   margin-left: 60vh;
+
+}
+
+#text,
+#madtext,
+#finaltext {
+   z-index: 10;
+   /* right: -200px;*/
+   position: absolute;
+   color: rgb(19, 19, 1);
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 4.5vw;
+   overflow: hidden;
+}
+
+#falltext,
+#downtext {
+   z-index: 0;
+   position: absolute;
+   color: rgb(19, 19, 1);
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 2vw;
+   overflow: hidden;
+
+}
+
+section img {
+   position: absolute;
+   top: 80px;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+
+
+/*CLICKME SPECIFICATIONS */
+
+.textbox #turned {
+   width: 100%;
+   height: 100%;
+   margin: 0;
+   padding: 0;
+}
+
+/*curtain*/
+.view {
+   position: relative;
+   width: 456px;
+   height: 300px;
+   margin: 60px auto 0;
+   border-radius: 30px;
+   background-color: rgba(0, 0, 0, 0.1);
+   box-shadow: inset 0 -2px 1px 0 rgba(255, 255, 255, .16), inset 0 0 0 2px rgba(0, 0, 0, .2);
+   transform-style: preserve-3d;
+   transform: perspective(1000px);
+}
+
+.slice {
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 100px;
+   box-sizing: border-box;
+   background-color: rgb(119, 21, 21);
+   background-size: 100%;
+   background-repeat: no-repeat;
+   transition: filter .2s linear;
+   z-index: 10;
+
+}
+
+/*here the id of one, two... to UNFOLD the animation, to define different states/slices */
+#one {
+   top: 0;
+   border-bottom: none;
+   border-top-left-radius: 30px;
+   border-top-right-radius: 30px;
+   background-position: 0 0;
+}
+
+#two {
+   top: 100px;
+   border-top: none;
+   border-bottom: none;
+   background-position: 0 -90px;
+}
+
+#three {
+   top: 200px;
+   border-top: none;
+   border-bottom-left-radius: 30px;
+   border-bottom-right-radius: 30px;
+   background-position: 0 -190px;
+}
+
+.shadow {
+   position: absolute;
+   top: 5px;
+   left: 0;
+   width: 100%;
+   height: 300px;
+   background: black;
+   border-radius: 30px;
+   opacity: .5;
+   filter: blur(5px);
+}
+
+/* the animation is triggered on hover */
+
+.view:hover .shadow {
+   left: -3px;
+   width: 462px;
+   height: 150px;
+   filter: blur(7px);
+   opacity: 1;
+}
+
+.view:hover #one {
+   transform-origin: 50% 0%;
+   -webkit-animation-name: first;
+   animation-name: first;
+   -webkit-animation-duration: 200ms;
+   animation-duration: 200ms;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+   -webkit-animation-play-state: play;
+   animation-play-state: play;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+   -webkit-animation-timing-function: linear;
+   animation-timing-function: linear;
+   filter: brightness(100%);
+}
+
+.view:hover #two {
+   transform-origin: 50% 100%;
+   -webkit-animation-name: second;
+   animation-name: second;
+   -webkit-animation-duration: 200ms;
+   animation-duration: 200ms;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+   -webkit-animation-play-state: play;
+   animation-play-state: play;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+   -webkit-animation-timing-function: linear;
+   animation-timing-function: linear;
+   filter: brightness(60%);
+}
+
+.view:hover #three {
+   transform-origin: 50% 0%;
+   -webkit-animation-name: third;
+   animation-name: third;
+   -webkit-animation-duration: 200ms;
+   animation-duration: 200ms;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+   -webkit-animation-play-state: play;
+   animation-play-state: play;
+   -webkit-animation-fill-mode: forwards;
+   animation-fill-mode: forwards;
+   -webkit-animation-timing-function: linear;
+   animation-timing-function: linear;
+   filter: brightness(100%);
+}
+
+/* @keyframes pour définir les styles en cascade pour l'animation CSS */
+@-webkit-keyframes first {
+   0% {
+      transform: none;
+   }
+
+   95% {
+      transform: rotateX(60deg);
+   }
+
+   100% {
+      transform: rotateX(60deg);
+   }
+}
+
+@keyframes first {
+   0% {
+      transform: none;
+   }
+
+   95% {
+      transform: rotateX(60deg);
+   }
+
+   100% {
+      transform: rotateX(60deg);
+   }
+}
+
+@-webkit-keyframes second {
+   0% {
+      top: 100px;
+      transform: none;
+   }
+
+   95% {
+      top: 18px;
+      transform: rotateX(-45deg);
+   }
+
+   100% {
+      top: 1px;
+      transform: rotateX(-59deg);
+   }
+}
+
+@keyframes second {
+   0% {
+      top: 100px;
+      transform: none;
+   }
+
+   95% {
+      top: 18px;
+      transform: rotateX(-45deg);
+   }
+
+   100% {
+      top: 1px;
+      transform: rotateX(-59deg);
+   }
+}
+
+@-webkit-keyframes third {
+   0% {
+      top: 200px;
+      transform: none;
+   }
+
+   95% {
+      top: 121px;
+      transform: rotateX(60deg);
+   }
+
+   100% {
+      top: 99px;
+      transform: rotateX(60deg);
+   }
+}
+
+@keyframes third {
+   0% {
+      top: 200px;
+      transform: none;
+   }
+
+   95% {
+      top: 121px;
+      transform: rotateX(60deg);
+   }
+
+   100% {
+      top: 99px;
+      transform: rotateX(60deg);
+   }
+}
+
+
+.link {
+   position: absolute;
+   width: 100px;
+   height: 60px;
+   top: 210px;
+   left: 22vw;
+   background-color: #96d2e4;
+   border-style: dashed;
+}
+
+
+.link:hover,
+.upload:hover {
+   background: #ccd1d5;
+}
+
+.textbox #growingALice {
+   z-index: 100;
+}
+
+#aliceGrows {
+   z-index: 1;
+}
+
+#alicePic {
+   z-index: 1;
+}
+
+#verticalStretch {
+   display: inline-block;
+   -webkit-transform: scale(2, 7);
+   /* Safari and Chrome */
+   -moz-transform: scale(2, 7);
+   /* Firefox */
+   -ms-transform: scale(2, 7);
+   /* IE 9 */
+   -o-transform: (2, 7);
+   /* Opera */
+   transform: (2, 7);
+   /* W3C for www consortium */
+}
+
+
+.tears1 {
+   background: aqua;
+   opacity: 0;
+   height: 50vh;
+}
+
+.tears2 {
+   background: rgb(0, 144, 144);
+   opacity: 0;
+   height: 45vh;
+}
+
+.tears3 {
+   background: rgb(0, 94, 94);
+   opacity: 0;
+   height: 40vh;
+   z-index: 1000;
+}
+
+.tears4 {
+   background: rgb(4, 70, 80);
+   opacity: 0;
+   height: 34vh;
+   z-index: 1000;
+}
+
+.tears5 {
+   background: rgb(1, 41, 60);
+   opacity: 0;
+   height: 28vh;
+   z-index: 1000;
+}
+
+
+/*ABOUT*/
+#aboutText {
+   font-size: 24px;
+   margin: 60px;
+   text-align: center;
+}
+
+#buttons {
+   display: flex;
+   font-weight: bold;
+   margin-left: 33%;
+   margin-top: 5%;
+}
+
+/*PARALLAX VIEW*/
+
+/*THE END*/
+
+
+.congrats {
+   visibility: hidden;
+}
+
+.congrats div {
+   position: absolute;
+   display: inline-block;
+   left: 50%;
+   top: 30%;
+   font-weight: 800;
+   font-size: 60px;
+   color: black;
+   transform: translate(-50%, -50%);
+   width: 100%;
+   text-align: center;
+}
+
+
+h1 {
+   color: #1a1919;
+   font-size: 50px;
+   letter-spacing: 7px;
+   cursor: pointer
+}
+
+h1 span {
+   transition: .5s linear
+}
+
+h1:hover>#N {
+   opacity: 0;
+}
+
+
+h1:hover span {
+   color: #fff;
+   text-shadow: 0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #fff;
 }
